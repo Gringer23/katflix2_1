@@ -1,0 +1,14 @@
+.file{
+  @apply m-auto;
+
+  >h1{
+    @apply text-xl font-semibold mb-5;
+  }
+
+  > label{
+    @apply block;
+    > input{
+      @apply cursor-pointer block text-sm text-gray-50;
+    }
+  }
+}

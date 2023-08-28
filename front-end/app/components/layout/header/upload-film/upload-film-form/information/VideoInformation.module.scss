@@ -1,0 +1,30 @@
+.info{
+  @apply rounded-lg overflow-hidden;
+  .thumbnail{
+    @apply text-gray-50 text-tiny flex items-center justify-center;
+    background-color: #3f3f41;
+    min-height: 200px;
+
+  }
+
+  .details{
+    @apply p-3;
+    background-color: #252526;
+    > div{
+      @apply mb-3 last:mb-0;
+      > span{
+        @apply block text-tiny;
+        &:first-child{
+          @apply text-gray-50 mb-3;
+        }
+
+        &:last-child{
+          > span {
+            @apply opacity-75;
+            color: #d23939;
+          }
+        }
+      }
+    }
+  }
+}

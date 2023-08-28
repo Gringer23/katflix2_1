@@ -1,0 +1,26 @@
+.recommended{
+  >.top_block{
+    @apply flex items-center justify-between mb-2 text-white;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+
+    >.sort{
+      @apply text-white;
+    }
+  }
+
+  .catalog{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media(max-width: 1050px){
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(max-width: 550px){
+      grid-template-columns: 1fr;
+    }
+    >div{
+      @apply mb-2.5;
+
+    }
+  }
+}

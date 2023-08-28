@@ -1,0 +1,10 @@
+.icons{
+  @apply relative flex items-center;
+  @media(max-width: 645px){
+  display: none;
+}
+}
+
+.button{
+  @apply inline-flex mx-2 items-center justify-center text-3xl text-red-500 ml-6 opacity-75 transition-opacity hover:opacity-100;
+}

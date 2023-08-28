@@ -1,0 +1,20 @@
+
+
+.main{
+  @apply flex flex-wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .content{
+    width: 80%;
+    transition: width .2s ease-in;
+    @media (max-width: 900px) {
+      width: 98%;
+    }
+
+
+    .wrapper{
+      @apply pl-6 pr-8
+    }
+  }
+}

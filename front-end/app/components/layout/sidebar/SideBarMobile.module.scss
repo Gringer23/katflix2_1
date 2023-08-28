@@ -1,0 +1,53 @@
+@keyframes opacity {
+  from{
+    opacity: 0;
+    left:-125px
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.sidebar{
+  @apply py-5 px-7;
+  position: fixed;
+  z-index: 900;
+  background-color: transparent;
+  border-right: 2px solid rgba(255, 255, 255, .3);
+  backdrop-filter: blur(20px);
+  top: 0;
+  left: 0;
+  height: 100%;
+  animation: opacity .5s;
+  @media (min-width: 901px) {
+    display: none;
+  }
+
+  &__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &_closeIcon{
+      font-size: 30px;
+      color: #d23939;
+    }
+  }
+  .icons{
+    @apply relative flex items-center justify-between mt-8;
+    @media (min-width: 646px) {
+      display: none;
+    }
+  }
+
+  .logo{
+    @apply text-4xl font-semibold;
+    color: #d23939;
+  }
+
+  .copy {
+    @apply text-white text-opacity-60 text-xs;
+  }
+}

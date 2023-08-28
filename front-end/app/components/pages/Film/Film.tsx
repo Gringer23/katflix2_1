@@ -41,7 +41,7 @@ const Film: FC = () => {
 					borderRadius: '20px'
 				}}
 			>
-				<img src={film.namePoster} alt={film.name} width='250' className={styles.poster} height='150'
+				<img src={film.namePoster} alt={film.name} width='300' className={styles.poster}
 				style={{transform: activeTab === 2 || activeTab === 3 ? 'scale(.8)' : '', marginLeft: activeTab === 1 ? '4rem' : '2.5rem', transition: 'all .4s'}}/>
 				{activeTab === 1 ? (
 					<Information film={film} />

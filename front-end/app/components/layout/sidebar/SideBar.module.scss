@@ -1,12 +1,8 @@
-
 .sidebar{
   @apply py-5 px-7;
   width: 18%;
-  transition: width .5s ease-in;
-  @media (max-width: 900px) {
-    display: none;
-  }
-  .logo{
+
+  >.logo{
     @apply text-4xl font-semibold;
     color: #d23939;
   }

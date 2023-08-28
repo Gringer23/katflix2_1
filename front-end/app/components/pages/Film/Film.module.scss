@@ -2,12 +2,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-position: top right;
   height: 36rem;
-  @media(max-width: 600px){
-    background-position: top center;
-    background-position-x: right;
-  }
 
   &::before{
     content: '';
@@ -24,9 +19,6 @@
     position: absolute;
     z-index: 2;
     margin-bottom: 2rem;
-    padding-top: 4rem;
-    @media(max-width: 500px){
-      width: 200px;
-    }
+    padding-top: 5rem;
   }
 }

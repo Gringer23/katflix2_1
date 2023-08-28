@@ -11,7 +11,7 @@ const FavoriteButton: FC<{favoriteId: number}> = ({favoriteId}) =>{
         skip: !user
     })
     const [favorite, {isLoading, data}] = api.useFavoriteMutation()
-    const isFavorite = profile?.favorite?.some((fav: any) => fav.favoriteFilm.id === favoriteId) || !!data
+    const isFavorite = profile?.favorite?.some(fav => fav.id === favoriteId) || !!data
     return(
         <button className={styles.favorite}
         onClick={() => favorite(favoriteId).unwrap()}
@@ -20,7 +20,7 @@ const FavoriteButton: FC<{favoriteId: number}> = ({favoriteId}) =>{
                 isFavorite ?
                     (
                        <>
-                           <MdFavorite className={styles.favButton}/>
+                           <MdFavorite/>
                            <span style={{ marginLeft: '0.5rem' }}>Убрать из избранного</span>
                        </>
                 ) : (

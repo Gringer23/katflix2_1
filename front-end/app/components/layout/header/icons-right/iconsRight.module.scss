@@ -1,8 +1,5 @@
 .icons{
   @apply relative flex items-center;
-  @media(max-width: 645px){
-  display: none;
-}
 }
 
 .button{

@@ -8,10 +8,7 @@ import styles from './Information.module.scss'
 import FavoriteButton from "@/components/UI/favorite-button/FavoriteButton";
 
 const Information: FC<{ film: any }> = ({ film }) => {
-	const { user } = useAuth();
-
-
-
+	const { user } = useAuth()
 	return (
 		<div className={styles.info}>
 			<div className={styles.additional}>
@@ -36,11 +33,11 @@ const Information: FC<{ film: any }> = ({ film }) => {
 				<div className={styles.buttons}>
 					<Link href={`/watch/${film.id}`}>
 						<div className={styles.button}>
-							<FaPlay color='#d91300' className={styles.playButton} />
+							<FaPlay color='#d91300' />
 							<span style={{ marginLeft: '0.5rem' }}>Смотреть онлайн</span>
 						</div>
 					</Link>
-						 <FavoriteButton favoriteId={film.id}/>
+					<FavoriteButton favoriteId={film.id}/>
 				</div>
 			) : (
 				<div className={styles.buttons}>

@@ -3,7 +3,7 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import {ICommentDto} from "@/types/comment.interface";
 import {commentApi} from "@/store/api/comment.api";
 
-import styles from '../../../layout/header/authForm/AuthForm.module.scss'
+import styles from './../../../layout/header/authForm/AuthForm.module.scss'
 import Field from "@/components/UI/field/Field";
 import {MdSend} from "react-icons/md";
 

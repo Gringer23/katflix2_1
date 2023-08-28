@@ -13,15 +13,12 @@
     >svg{
       color: #4e4e5d;
     }
-
   }
 
   .profile_menu{
-    @apply shadow-block animate-scaleIn p-4 absolute right-2 w-60 z-20 rounded-xl pb-6;
-    top: calc(100% + 1rem);
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .3);
-    backdrop-filter: blur(20px);
+    @apply shadow-block animate-scaleIn p-4 absolute right-2 w-60 z-20 rounded-lg pb-6;
+    top: calc(100% + 1.4rem);
+    background-color: #3f3f41;
 
     >ul{
       >li{

@@ -4,13 +4,11 @@ import VideoItem from '@/components/UI/video-item/VideoItem'
 import { useSearch } from '@/components/layout/header/search/useSearch'
 
 import styles from './Search.module.scss'
-import {useOutside} from "@/hooks/useOutside";
 
 const Search: FC = () => {
-	const { data, handleSearch, searchTerm, isSuccess } = useSearch();
-	const { isShow, setIsShow, ref } = useOutside(false);
+	const { data, handleSearch, searchTerm, isSuccess } = useSearch()
 	return (
-		<div className={styles.search_top} ref={ref} onClick={() => setIsShow(!isShow)}>
+		<div className={styles.search_top}>
 			<label>
 				<input
 					type='text'
@@ -20,14 +18,10 @@ const Search: FC = () => {
 				/>
 				<img src='/img/common/search.svg' alt='' />
 			</label>
-			{isSuccess && isShow && (
+			{isSuccess && (
 				<div className={styles.result}>
-					{ data?.length ? (
-						data.map(film =>
-							<div className={styles.result_film}>
-							<VideoItem isSmall item={film} key={film.id} />
-							</div>
-						)
+					{data?.length ? (
+						data.map(film => <VideoItem isSmall item={film} key={film.id} />)
 					) : (
 						<div className='text-white'>Ничего не нашлось</div>
 					)}

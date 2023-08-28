@@ -62,7 +62,6 @@ const AuthRight: FC = () => {
 								name='email'
 								validate={validateEmail}
 								className={styles.input}
-								placeholder={'Логин'}
 							/>
 							{
 								errors.email && touched.email && (
@@ -74,7 +73,6 @@ const AuthRight: FC = () => {
 								validate={validatePassword}
 								className={styles.input}
 								type='password'
-								placeholder={'Пароль'}
 							/>
 							{
 								errors.password && touched.password && (

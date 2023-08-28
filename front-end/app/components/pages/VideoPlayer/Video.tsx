@@ -1,4 +1,4 @@
-import {FC, useEffect} from "react";
+import {FC} from "react";
 
 import styles from './Video.module.scss'
 import {IFilm} from "@/types/film.interface";
@@ -14,12 +14,6 @@ const Video :FC = () =>{
     const {data: video = {} as IFilm, isLoading } = filmApi.useGetFilmByIdQuery(Number(query.id), {
         skip: !query.id
     })
-
-    const [updateViews] = filmApi.useUpdateViewsMutation();
-
-    useEffect(() => {
-        if(query.id) updateViews(Number(query.id))
-    }, [query.id]);
 
     if (isLoading)
         return (

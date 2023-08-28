@@ -5,7 +5,7 @@ export interface IUser extends IBase {
 	email: string
 	name: string
 	isAdmin?: boolean
-	favorite?: string[]
+	favorite?: IFilm[]
 
 	avatarPath?: string
 	films?: IFilm[]

@@ -4,7 +4,6 @@ import { HiUpload } from 'react-icons/hi'
 import { filmApi } from '@/store/api/film.api'
 
 import stylesIcon from '../icons-right/iconsRight.module.scss'
-import UploadModal from "@/components/layout/header/upload-film/UploadModal";
 
 const UploadFilm: FC = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -28,7 +27,6 @@ const UploadFilm: FC = () => {
 			>
 				<HiUpload />
 			</button>
-			<UploadModal isOpen={isOpen} setIsOpen={setIsOpen} filmId={filmId}/>
 		</>
 	)
 }

@@ -10,17 +10,12 @@
   }
 
   .catalog{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    @media(max-width: 1050px){
-      grid-template-columns: 1fr 1fr;
-    }
-    @media(max-width: 550px){
-      grid-template-columns: 1fr;
-    }
+    @apply flex flex-wrap gap-5;
+
     >div{
       @apply mb-2.5;
-
+      flex: 1 1 calc((100%/ 5) + 2rem);
+      width: 23%;
     }
   }
 }

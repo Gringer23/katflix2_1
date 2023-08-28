@@ -10,16 +10,14 @@ import {TypeComponentAuthFields} from '@/providers/private-route.interface'
 import {persistor, store} from '@/store/store'
 
 import '../app/styles/_globals.scss'
-import {QueryClient, QueryClientProvider} from "react-query";
-
-const queryClient = new QueryClient()
 
 
 type TypeAppProps = AppProps & TypeComponentAuthFields
 
 export default function App({ Component, pageProps }: TypeAppProps) {
 	return (
-		<QueryClientProvider client={queryClient}>
+		<>
+
 			<NextProgressBar
 				color='#FF7652'
 				startPosition={0.3}
@@ -42,6 +40,6 @@ export default function App({ Component, pageProps }: TypeAppProps) {
 					</AuthProvider>
 				</PersistGate>
 			</Provider>
-		</QueryClientProvider>
+		</>
 	)
 }

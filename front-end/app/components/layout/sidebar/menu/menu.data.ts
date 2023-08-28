@@ -21,6 +21,6 @@ export const menu: IMenuItem[] = [
 	{
 		title: 'Избранное',
 		icon: HiHeart,
-		link: `/favorites`
+		link: '/favorites'
 	}
 ]

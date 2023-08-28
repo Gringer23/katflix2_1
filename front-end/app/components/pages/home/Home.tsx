@@ -6,11 +6,10 @@ import {Discover} from '@/components/pages/discover/Discover'
 import {IHome} from '@/components/pages/home/home.interface'
 
 const Home: FC<IHome> = ({ randomFilm, topFilm, newFilm }) => {
-
 	return (
 		<Layout title={'Katflix | Новый онлайн-кинотеатр'}>
 			<Discover topFilm={topFilm} randomFilm={randomFilm} />
-			<Catalog newVideo={newFilm} title={'Новые фильмы'} />
+			<Catalog newVideo={newFilm} />
 		</Layout>
 	)
 }

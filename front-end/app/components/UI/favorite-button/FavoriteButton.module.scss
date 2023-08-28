@@ -10,17 +10,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
-    @media (max-width: 760px) {
-      font-size: 25px;
-    }
 
-  >span {
-    @media(max-width: 760px){
-      display: none;
-    }
-
-    > span:hover {
-      color: white;
-    }
+  >span:hover {
+    color: white;
   }
 }

@@ -9,7 +9,7 @@
 
 @keyframes bottom {
   from{
-    bottom: -20px;
+    bottom: -25px;
   }
   to {
     bottom: 0;
@@ -27,7 +27,7 @@
   border-radius: 20px;
 
   .episodePreview{
-   animation: bottom .7s;
+   animation: bottom .9s;
     position: relative;
   }
 }

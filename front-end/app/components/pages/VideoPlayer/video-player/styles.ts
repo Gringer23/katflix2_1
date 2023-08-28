@@ -37,20 +37,20 @@ export const Container = styled.div<IContainerProps>`
         : "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"};
   }
 
-  width: 98%;
-  max-height: 90%;
+  width: 100%;
+  max-height: calc(100% - 2rem);
   position: relative;
   background: #000;
   overflow: hidden;
-  margin: 1rem auto;
-  border-radius: 15px;
 
   video {
+    height: 100% !important;
+    max-height: 100% !important;
     width: 100% !important;
-    height: 95vh !important;
+    max-width: 100% !important;
     cursor: none;
     opacity: ${props => (props.hideVideo ? 0 : 1)};
-    
+
     &::cue {
       color: #eee;
       z-index: 4;
@@ -127,7 +127,7 @@ export const Controlls = styled.div<IControlsProps>`
       }
 
       svg {
-        font-size: 20px;
+        font-size: 35px;
         margin-right: 5px;
       }
     }
@@ -148,7 +148,7 @@ export const Controlls = styled.div<IControlsProps>`
   }
 
   .controlls {
-
+    margin: 20px 0;
     display: flex;
     justify-items: center;
 
@@ -185,7 +185,7 @@ export const Controlls = styled.div<IControlsProps>`
     svg {
       cursor: pointer;
       opacity: 0.7;
-      font-size: 20px;
+      font-size: 25px;
       transition: all 0.2s ease-out;
 
       &:hover {
@@ -275,7 +275,7 @@ export const VideoPreLoading = styled.div<IVideoPreLoadingProps>`
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 30px;
   transition: all 0.5s ease-out;
   display: flex;
   flex-direction: column;
@@ -308,7 +308,7 @@ export const VideoPreLoading = styled.div<IVideoPreLoadingProps>`
       color:  #c62e21;
       opacity: 0.5;
       margin-left: auto;
-      font-size: 3em;
+      font-size: 4em;
       padding: 10px;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -393,12 +393,10 @@ export const StandyByInfo = styled.div<IStandyByInfoProps>`
 
     h1 {
       font-weight: bold;
-      font-size: 10px;
+      font-size: 3em;
       color: #989898;
       font-family: 'Ubuntu', sans-serif;
       margin: 10px 0;
-      width: 60%;
-      float: right;
     }
 
     h2 {

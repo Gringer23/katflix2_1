@@ -36,7 +36,7 @@ const VideoSerial :FC = () => {
     return (
             <>
                 <Head>
-                    <title>{film.name + ' ' + serial.id} серия</title>
+                    {film.name + ' ' + serial.id} серия
                 </Head>
                 <div className={styles.wrapper}>
                     <Player src={serial.videoPath} title={film.namePoster} link={film.id}/>

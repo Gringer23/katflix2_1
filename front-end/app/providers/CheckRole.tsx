@@ -9,11 +9,12 @@ const checkRole: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
 	children,
 	Component: { isOnlyUser }
 }) => {
-	const { user } = useAuth()
+	const { isLoading, user } = useAuth()
 	const { pathname, replace } = useRouter()
 
 	const Children = () => <>{children}</>
 
+	if (isLoading) return null
 
 	if (user) return <Children />
 

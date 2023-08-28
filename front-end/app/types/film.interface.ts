@@ -23,7 +23,6 @@ export interface IFilm extends IBase {
 	user: IUser
 	comments: IComment[]
 	series: ISeries[]
-	type: string
 }
 
 export interface IFilmDto
@@ -38,5 +37,4 @@ export interface IFilmDto
 		| 'subDescription'
 		| 'isPublic'
 		| 'namePoster'
-		| 'type'
 	> {}

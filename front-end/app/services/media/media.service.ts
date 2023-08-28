@@ -8,6 +8,7 @@ export const MediaService = {
             headers: { 'Content-Type': 'multipart/form-data'},
             onUploadProgress: progressEvent => {
                 if(setValue){
+                    // @ts-ignore
                     const progress = (progressEvent.loaded / progressEvent.total) * 100
                     setValue(Math.ceil(progress))
                 }

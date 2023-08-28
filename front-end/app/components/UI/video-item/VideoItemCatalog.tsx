@@ -6,7 +6,7 @@ import {IVideoItem} from "@/components/UI/video-item/videoItem.interface";
 import {BiTrash} from "react-icons/bi";
 
 const APP = 'http://localhost:3000'
-const VideoItemCatalog:FC<IVideoItem> = ({removeHandler, item, isUpdateLink, isSmall}) => {
+const VideoItemCatalog:FC<IVideoItem> = ({removeHandler, item, isUpdateLink}) => {
 
     return(
           <>

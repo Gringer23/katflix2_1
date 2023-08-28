@@ -41,18 +41,7 @@ const UploadFilmForm: FC<{filmId: number, handleCloseModal: () => void}> = ({fil
                             error={form?.errors?.description}
                         />
                         <div className='mt-8'>
-                           <Controller
-                               control={form.control}
-                               name='thumbnailPath'
-                               render={(field: {onChange}) => {
-                                   <UploadField
-                                       folder='films_thumbnail'
-                                       onChange={(value: IMediaResponse) => {
-                                       field.onChange(value.url)}
-                                       }
-                                       />
-                               }}
-                           />
+
                         </div>
                     </div>
                     <div className={'w-5/12 p-3 pl-10'}>

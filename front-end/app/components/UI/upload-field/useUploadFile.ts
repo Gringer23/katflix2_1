@@ -27,7 +27,7 @@ export const useUploadFile = (
 
     const uploadFile = async (e: ChangeEvent<HTMLInputElement>) => {
         const files = e.target.files
-        if(!files.length) return
+        if(!files?.length) return
 
         setIsChosen && setIsChosen(true)
 

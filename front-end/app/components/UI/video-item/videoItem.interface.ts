@@ -4,5 +4,5 @@ export interface IVideoItem {
 	item: IFilm
 	removeHandler?: (filmId: number) => void
 	isUpdateLink?: boolean
-	isSmall: boolean
+	isSmall?: boolean
 }

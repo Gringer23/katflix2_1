@@ -28,8 +28,8 @@ const Favorite:FC = () => {
                 </div>
                 <div className={style.catalog}>
                     {
-                        data?.favorite.length !== 0 ?
-                            data?.favorite.map(({ favoriteFilm }) =>
+                        data?.favorite?.length !== 0 ?
+                            data?.favorite?.map(({ favoriteFilm }: any) =>
                                 <VideoItemCatalog item={favoriteFilm} key={favoriteFilm.id}/>
                             )
                             : <span className={style.notFav}>Вы пока ничего не добавили в избранное...</span>
